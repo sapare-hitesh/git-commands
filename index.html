@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Git Commands</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Learn Git Commands</h1>
+        <p>Master Git commands with smooth animations and descriptions.</p>
+    </header>
+    <main>
+        <div class="accordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">Basic commands</h2>
+                <div class="accordion-content">
+                    <p>clear screen</p>
+                    <code>git cls</code><br>
+                    <p>git logs details</p>
+                    <code>git log</code><br>
+                    <p>project or code state we can know like what changes are made</p>
+                    <code>git status</code><br>
+                    
+                </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">Clone online repository(already created repository or project)</h2>
+                <div class="accordion-content">
+                    <p>1st create a folder using cmd or anything</p>
+                    <p>create folder---> mkdir projects </p>
+                    <p>navigate to that projects ---> cd projects  </p>
+
+                    <code>git init</code><br>
+                    <code>git clone <- git url link --></code>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">create a local repository and link to online repository</h2>
+                <div class="accordion-content">
+                    <p>create folder---> mkdir projects </p>
+                    <p>navigate to that projects ---> cd projects  </p>
+                    <p>create folder---> mkdir portfolio </p>
+                    <p>create any files like index.html, style.css, etc</p>
+                    <p>initialize the repository(we are creating a memory for storing the local repository or origin)</p>
+                    <code>git init</code><br>
+                    <hr>
+                    <p>Now add all new files or modified files to staged area(memory or cotainer)</p>
+                    <p>files already created and modified --> unstaged to staged</p>
+                    <p>files newly created  -->  untracked to tracked and unstaged to staged</p>
+                    <code>git add . </code><br>
+                    <br>
+                    <p>git restore --staged <file>..." to unstage</p>
+                    <code>git restore --staged <file name ></code><br>
+                    <code>git restore --staged .</code>
+                    <hr>
+                    <p>Now commit(it is record for changes ) it is description for change to easy understand and every commit has a unique hash code</p>
+                    <p>uncommit to commit</p>
+                    <code>git commit -m "new files add"</code><br>
+                            <p>shortcut for add and commit</p>
+                    <code>git commit -am "new files add"</code>
+                    <p>now we are successfully created a updated local repository</p>
+                    <hr>
+                    <p>now link to online repository and add updates to online repository</p>
+                    <code>git remote add origin <-- link --></code><br>
+                    <code>git push origin main</code>
+                    <p>Here origin means location of online repository and main it is a branch(original code project)</p>
+                    <p>shortcut --> if we update the files again 1st commit the local repository and the push command</p>
+                    <code>git push -u origin main </code><br>
+                    <p>1st time run above code and next every time run below code. it stores origin main in upstream</p>
+                    <code>git push</code>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">Update Local Files to Staging Area</h2>
+                <div class="accordion-content">
+                    <p>Use <code>git add .</code> to add all changes to the staging area.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">Push Local Repo to Remote Repo</h2>
+                <div class="accordion-content">
+                    <p>Use <code>git push origin main</code> to push changes to the main branch of the remote repository.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">Rollback Code from Remote Repo to Local Repo</h2>
+                <div class="accordion-content">
+                    <p>Use <code>git fetch origin</code> followed by <code>git reset --hard origin/main</code> to rollback to the remote state.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">Rollback from Local Repo to Working Directory</h2>
+                <div class="accordion-content">
+                    <p>Use <code>git checkout -- .</code> to discard changes in the working directory.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">Create and Merge Branches</h2>
+                <div class="accordion-content">
+                    <p>Use <code>git branch new-branch</code> to create a new branch.</p>
+                    <p>Use <code>git merge new-branch</code> to merge the new branch into the current branch.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Learn Git Commands</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
